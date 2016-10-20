@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="595.000199999995" prefWidth="941.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="452.0" prefWidth="639.9999000000025" VBox.vgrow="ALWAYS">
+            <children>
+                <Pane id="" layoutX="-2.0" layoutY="0.0" prefHeight="596.0" prefWidth="941.0">
+                    <children>
+                        <Button layoutX="38.0" layoutY="14.0" mnemonicParsing="false" prefHeight="22.1328125" prefWidth="91.0" text="Set Start" />
+                        <Button layoutX="138.0" layoutY="14.0" mnemonicParsing="false" prefHeight="22.1328125" prefWidth="91.0" text="Set Goal" />
+                        <Pane id="" fx:id="moniteredPane" layoutX="38.0" layoutY="77.0" prefHeight="438.0" prefWidth="834.0" style="">
+                            <children>
+                                <Label layoutX="0.0" layoutY="0.0" prefHeight="22.1328040527369" prefWidth="77.0" text="Graph Pane" textFill="#009918" />
+                            </children>
+                        </Pane>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
