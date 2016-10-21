@@ -103,11 +103,20 @@ public class Graph_Panel {
             shapes.put(idCost.getKey(),ellipse);
         });
     }
+    
+    private EventHandler handler;
 
+    private void removeHandlers(){
+        graphPane.removeEventHandler(MouseEvent.MOUSE_ENTERED, handler );
+        graphPane.removeEventHandler(MouseEvent.MOUSE_RELEASED,handler);
+        graphPane.removeEventHandler(MouseEvent.MOUSE_EXITED,handler);
+        graphPane.removeEventHandler(MouseEvent.MOUSE_RELEASED,handler);
+        graphPane.removeEventHandler(MouseEvent.MOUSE_MOVED,handler);
+    }
 
     void drawEdge(double x,double y,Ellipse node){
 
-        EventHandler handler = (Event e)->{
+        handler = (Event e)->{
             MouseEvent event = (MouseEvent)e;
             Group gr = new Group();
             Text text = new Text("1st Street");
@@ -119,6 +128,7 @@ public class Graph_Panel {
             graphPane.getChildren().add(gr);
             System.out.println("Mouse Drag Released: " + event.getX() + " , " + event.getY());
             e.consume();
+            removeHandlers();
             return;
         };
         graphPane.addEventHandler(MouseEvent.MOUSE_RELEASED, handler);
