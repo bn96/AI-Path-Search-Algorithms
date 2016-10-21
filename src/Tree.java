@@ -29,13 +29,6 @@ public class Tree {
         return nodes;
     }
 
-    public Iterator<Node> iterator(String parent,String searchType){
-        if (searchType == "BFS"){
-            return new BreadthFirstTreeIterator(nodes,parent);
-        }else{
-            return new DepthFirstTreeIterator(nodes,parent);
-        }
-    }
 }
 
 
